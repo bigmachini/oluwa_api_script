@@ -1,0 +1,5 @@
+*.pyc
+*.swp
+*.ini
+*.idea
+settings.ini
