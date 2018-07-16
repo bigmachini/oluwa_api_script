@@ -37,5 +37,5 @@ def format_output(status, data, message):
 
 
 if __name__ == '__main__':
-    port = 8060  # the custom port you want
+    port = 8080  # the custom port you want
     app.run(host='0.0.0.0', port=port, threaded=True)
