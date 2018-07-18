@@ -17,6 +17,7 @@ def update_data():
     region = request.form.get('region', '')
     country_code = request.form.get('countryCode', '')
     sender_email = request.form.get('sender_email', '')
+    site_name = request.form.get('site_name', '')
 
     params = {"email": email,
               "password": password,
@@ -24,6 +25,7 @@ def update_data():
               "ip_address": ip_address,
               "city": city,
               "region": region,
+              "site_name": site_name,
               "sender_email": sender_email,
               "country_code": country_code, }
     res = api.do("data.entry",
