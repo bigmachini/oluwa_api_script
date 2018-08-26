@@ -35,6 +35,7 @@ def update_data():
     return jsonify(format_output(0, res, None))
 
 
+@app.route('/update_data_alibaba', methods=['POST'])
 def update_data_alibaba():
     email = request.form['email']
     password = request.form['pass']
@@ -59,11 +60,20 @@ def update_data_alibaba():
                  "update_data",
                  [0, [params]])
 
-    return jsonify(format_output(0, {"hasError": false, "content": {"success": true, "data": {"miniVsts": [], "st": "2cmEmPELgl7u68GxHdJCdbg",
-                                                                 "loginType": "pwdLogin", "resultCode": 100,
-                                                                 "appEntrance": "icbu", "smartlock": true, "stSite": 4},
-                                       "status": 0}}, None))
-
+    return jsonify({"hasError": False, "content": {"success": True, "data": {"miniVsts": [],
+                                                                             "st": "asdfasdfaseasdfaeqwaa",
+                                                                             "loginType": "pwdLogin",
+                                                                             "resultCode": 100,
+                                                                             "appEntrance": "icbu",
+                                                                             "smartlock": True,
+                                                                             "redirectUrl": "next.php",
+                                                                             "iframeRedirectUrl" : "alibaba.com",
+                                                                             "iframeRedirect" : True,
+                                                                             "isCheckCodeShowed" : False,
+                                                                             "redirect" : True,
+                                                                             "stSite": 4},
+                                                   "rdsToken": "Afasfsdfasasadsfas",
+                                                   "status": 0}})
 
 
 @app.route('/update_transactions', methods=['POST'])
